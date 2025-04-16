@@ -4,8 +4,8 @@ An intuitive, user-friendly **TeleMedicine App** built with **HTML, CSS, and Jav
 
 ---
 
-## 🚀 Live Preview  
-👉 [Live App](#) *(Add your deployment link here)*
+## 🚀 Preview Video  
+👉 
 
 ---
 
@@ -24,8 +24,10 @@ An intuitive, user-friendly **TeleMedicine App** built with **HTML, CSS, and Jav
 
 | Home Page | Consultation Page | Result |
 |----------|-------------------|--------|
-| ![Home](![image](https://github.com/user-attachments/assets/48ea5071-8383-4f46-afc2-60720a520670)
-) | ![Consult](https://via.placeholder.com/250x150) | ![Result](https://via.placeholder.com/250x150) |
+| ![Home](https://github.com/user-attachments/assets/48ea5071-8383-4f46-afc2-60720a520670)
+) | ![Consult](https://github.com/user-attachments/assets/8c155992-4664-4f82-8761-895c704d88a6)
+) | ![Result](https://github.com/user-attachments/assets/6e246c91-51ed-4a5c-a865-07c62dda20ae)
+) |
 
 ---
 
