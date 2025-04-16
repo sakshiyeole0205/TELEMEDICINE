@@ -24,7 +24,8 @@ An intuitive, user-friendly **TeleMedicine App** built with **HTML, CSS, and Jav
 
 | Home Page | Consultation Page | Result |
 |----------|-------------------|--------|
-| ![Home](https://via.placeholder.com/250x150) | ![Consult](https://via.placeholder.com/250x150) | ![Result](https://via.placeholder.com/250x150) |
+| ![Home](![image](https://github.com/user-attachments/assets/48ea5071-8383-4f46-afc2-60720a520670)
+) | ![Consult](https://via.placeholder.com/250x150) | ![Result](https://via.placeholder.com/250x150) |
 
 ---
 
