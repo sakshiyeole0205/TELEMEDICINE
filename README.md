@@ -4,8 +4,7 @@ An intuitive, user-friendly **TeleMedicine App** built with **HTML, CSS, and Jav
 
 ---
 
-## 🚀 Preview Video  
-👉 
+
 
 ---
 
