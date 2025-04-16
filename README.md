@@ -25,9 +25,9 @@ An intuitive, user-friendly **TeleMedicine App** built with **HTML, CSS, and Jav
 | Home Page | Consultation Page | Result |
 |----------|-------------------|--------|
 | ![Home](https://github.com/user-attachments/assets/48ea5071-8383-4f46-afc2-60720a520670)
-) | ![Consult](https://github.com/user-attachments/assets/8c155992-4664-4f82-8761-895c704d88a6)
-) | ![Result](https://github.com/user-attachments/assets/6e246c91-51ed-4a5c-a865-07c62dda20ae)
-) |
+ ![Consult](https://github.com/user-attachments/assets/8c155992-4664-4f82-8761-895c704d88a6)
+  ![Result](https://github.com/user-attachments/assets/6e246c91-51ed-4a5c-a865-07c62dda20ae)
+ 
 
 ---
 
