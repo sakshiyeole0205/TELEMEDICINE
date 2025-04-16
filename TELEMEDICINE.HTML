@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeleMedicine App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      background: #f0f8ff;
+    }
+    header {
+      background-color: #0077b6;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #023e8a;
+    }
+    nav a {
+      padding: 14px 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background-color: #0077b6;
+    }
+    .container {
+      max-width: 600px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    select, input[type=text], input[type=number], input[type=email], button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      background-color: #0077b6;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #023e8a;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      background: #caf0f8;
+      border-radius: 8px;
+    }
+    .hidden {
+      display: none;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background-color: #0077b6;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Smart TeleMedicine Assistant</h1>
+    <p>Your health, our priority</p>
+  </header>
+  <nav>
+    <a href="#home" onclick="showPage('home')">Home</a>
+    <a href="#consult" onclick="showPage('consult')">Consultation</a>
+    <a href="#about" onclick="showPage('about')">About</a>
+  </nav>
+
+  <div id="home" class="container">
+    <h2>Welcome to TeleMedicine</h2>
+    <p>This platform provides instant advice and awareness about common diseases. Use our simple tool to find solutions and stay informed!</p>
+  </div>
+
+  <div id="consult" class="container hidden">
+    <h2>Get Instant Medical Help</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Your Name">
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" placeholder="Your Age">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Your Email">
+
+    <label for="disease">Select Disease:</label>
+    <select id="disease">
+      <option value="">-- Choose a disease --</option>
+      <option value="cold">Common Cold</option>
+      <option value="diabetes">Diabetes</option>
+      <option value="hypertension">Hypertension</option>
+      <option value="asthma">Asthma</option>
+    </select>
+
+    <label for="symptom">Enter Symptoms:</label>
+    <input type="text" id="symptom" placeholder="e.g., sneezing, high BP, cough">
+
+    <button onclick="getSolution()">Get Medicine</button>
+
+    <div class="result" id="solutionBox" style="display: none;"></div>
+  </div>
+
+  <div id="about" class="container hidden">
+    <h2>About This App</h2>
+    <p>This TeleMedicine software is designed to offer immediate solutions for common diseases based on your symptoms. We aim to make healthcare guidance accessible anytime, anywhere. Remember to always consult a real doctor for any serious conditions.</p>
+  </div>
+
+  <footer>
+    &copy; 2025 Smart TeleMedicine | All Rights Reserved
+  </footer>
+
+  <script>
+    const medicines = {
+      cold: "Paracetamol, Cetirizine, Steam inhalation, Vitamin C.",
+      diabetes: "Metformin, Glimepiride, Regular Insulin, Dietary control.",
+      hypertension: "Amlodipine, Telmisartan, Low salt diet, Lifestyle changes.",
+      asthma: "Salbutamol Inhaler, Budesonide, Avoid dust and smoke."
+    };
+
+    function getSolution() {
+      const name = document.getElementById('name').value.trim();
+      const age = document.getElementById('age').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const disease = document.getElementById('disease').value;
+      const symptom = document.getElementById('symptom').value.trim();
+      const solutionBox = document.getElementById('solutionBox');
+
+      if (!name || !age || !email || !disease) {
+        alert("Please fill all required fields.");
+        return;
+      }
+
+      let prescription = medicines[disease];
+      solutionBox.innerHTML = `<strong>Hello ${name},</strong><br>Age: ${age}<br>Email: ${email}<br><br><strong>Suggested Medicine:</strong> ${prescription}<br><strong>Note:</strong> Based on symptom: "${symptom}"`;
+      solutionBox.style.display = 'block';
+    }
+
+    function showPage(pageId) {
+      const pages = ['home', 'consult', 'about'];
+      pages.forEach(id => {
+        document.getElementById(id).classList.add('hidden');
+      });
+      document.getElementById(pageId).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
+
